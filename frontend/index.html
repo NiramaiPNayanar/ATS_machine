@@ -1,13 +1,30 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Resume Screener — Demo</title>
-  </head>
-  <body>
-    this is where ill add the Ui/Ux part but im still working on the text extraction, that said i also gave negative points if i detect a photo inside the resume, like its a bad rule of thumb to have a photo in your resume
-    <div id="root"></div>
-    <script type="module" src="/src/index.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ATS Resume Score Machine (Gemini)</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>ATS Resume Score Machine</h1>
+    <p>Powered by Gemini API</p>
+
+    <label>Upload Resume (PDF or TXT)</label>
+    <input type="file" id="resumeFile">
+
+    <label>Paste Job Description</label>
+    <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+
+    <button id="scoreBtn">Score Resume</button>
+
+    <div id="resultBox">
+      <h2>Results</h2>
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
